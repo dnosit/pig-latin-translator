@@ -1,0 +1,26 @@
+{
+  "name": "pig-latin-translator",
+  "version": "1.0.0",
+  "description": "A pig latin translator backend, built for serverless node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dnosit/pig-latin-translator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dnosit/pig-latin-translator/issues"
+  },
+  "homepage": "https://github.com/dnosit/pig-latin-translator#readme",
+  "devDependencies": {
+    "@types/node": "^14.14.20"
+  },
+  "dependencies": {
+    "typescript": "^4.1.3"
+  }
+}
