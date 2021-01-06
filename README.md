@@ -12,6 +12,6 @@ https://swizec.com/blog/typescript-for-serverless-lambda-backends#serverless-han
 https://www.freecodecamp.org/news/build-an-api-with-typescript-and-aws/
 
 
-# Serverless 
+# Serverless
 https://www.serverless.com/framework/docs/providers/aws/guide/credentials/
 
