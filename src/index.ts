@@ -17,9 +17,13 @@ function translatePhraseToPig(phrase : string ){
     let currentWord : string = "";
     // sequentially determine each word and convert to pig latin 
     for (let i : number = 0; i < phrase.length; i++ ){
-        if ( !(phrase[i] == " ") || (i == 0) ){
+        if ( !(phrase[i] == " ") ){
             // not a space, so add it to current word
             currentWord += phrase[i]; 
+            // if char is last in phrase, end of the very last word 
+            if (i == (phrase.length -1) ) {
+                pigPhrase += translateWordToPigLatin(currentWord);
+            }
         }
         else{ // end of word - add translated word + space, then clear word
             pigPhrase += translateWordToPigLatin(currentWord) + " ";
@@ -70,5 +74,8 @@ function translateWordToPigLatin(word : string) {
     else{ // in case of word starting with vowel 
         pigWord += "way"; 
     }
+    // make entire word lower case 
+    pigWord = pigWord.toLowerCase();
     return pigWord; 
 }
+
