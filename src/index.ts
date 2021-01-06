@@ -58,11 +58,15 @@ function translateWordToPigLatin(word : string) {
         }
     }
     // add ending and return
-    if (firstConsonantIndex >= 0){
-        // case of word starting with a consonant 
+    if (firstConsonantIndex == 0){
+        // in case of word starting with a consonant 
         pigWord += word[firstConsonantIndex] + "ay"; 
     }
-    else{ // case of word starting with a vowel
+    else if( firstConsonantIndex >= 0) {
+        // in case of word starting with vowel, containing consonants 
+        pigWord += word[firstConsonantIndex] + "way";
+    }
+    else{ // in case of consonant-free word 
         pigWord += "way"; 
     }
     return pigWord; 
