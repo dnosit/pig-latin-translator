@@ -1,18 +1,17 @@
 // As Lambda entry point 
-export const handler = async (event: string ): Promise<string> => {
-    // Hello
-    // let str: string = "Hello Lambda";
-    //console.log(str); 
-    console.log(event); 
+export const handler = async (event: any = {} ): Promise<any> => {
+    // 
+    let eventString : string = JSON.stringify( event, null, 2);
+    console.log("Phrase in pig latin: " + translatePhraseToPig(eventString)); 
 
     // Form pig latin response 
-    const response = JSON.stringify( translatePhraseToPig(event), null, 2);
+    const response : string = translatePhraseToPig(  eventString );
     return response; 
 }
 
 
 // pig latin phrase translator  
-function translatePhraseToPig(phrase : string ){
+function translatePhraseToPig(phrase : string ): string{
     let pigPhrase : string = ""; 
     let currentWord : string = "";
     // sequentially determine each word and convert to pig latin 
@@ -33,9 +32,8 @@ function translatePhraseToPig(phrase : string ){
     return pigPhrase; 
 }
 
-
 // pig latin word translator  
-function translateWordToPigLatin(word : string) {
+function translateWordToPigLatin(word : string): string {
     let pigWord : string = "";
     let vowels : string[] = ["a", "e", "i", "o", "u", 
                              "A", "E", "I", "O", "U" ]; 
